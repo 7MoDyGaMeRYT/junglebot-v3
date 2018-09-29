@@ -67,9 +67,9 @@ ${prefix}صراحه ⇏ game صراحه
 client.on('message', message => {
     if (message.author.bot) return;
      if (message.content === prefix + "help") {
-message.reply('**check your DMs! :mailbox_with_mail: **'
-	      
- message.author.sendMessage(`
+message.reply('**check your DMs! :mailbox_with_mail: **')
+	
+	message.author.sendMessage(`
 **Arabs Bot By: <@495149259340120076> + <@337309575864647680>** 
 ╔═══╗────╔╗─────╔══╗───╔╗
 ║╔═╗║────║║─────║╔╗║──╔╝╚╗
