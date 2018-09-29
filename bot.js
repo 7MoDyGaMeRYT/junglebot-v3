@@ -54,7 +54,7 @@ const embed = new Discord.RichEmbed()
                 .setFooter(iimr7modyx.author.username, iimr7modyx.author.avatarURL)
                 .addField('**:flag_ae:  الامارات  العربية المتحدة**',
                 "**『"+ hours + ":" + minutes +":"+ seconds + "』**")
-                 .addField('**:flag_sa: المملكة العربية السعودية **',
+                 .addField('** :flag_sa:  المغرب  + السعودية :flag_ma: **',
                 "**『"+ hours2 + ":" + minutes +":"+ seconds  + "』**") 
                 .addField(' **:flag_eg: جمهورية  مصر العربية** ',
                 "**『"+ hours3 + ":" + minutes +":"+ seconds  + "』**") 
