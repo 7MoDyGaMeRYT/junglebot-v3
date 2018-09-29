@@ -409,20 +409,27 @@ Server Count: __${guild.memberCount}__**`)
 });
   
    
-   client.on('message', message => {
-	       var prefix = ">";
-            if (message.content.startsWith(prefix + "bot")) {
+client.on('message', message => {
+            if (message.content.startsWith(prefix + "bot-info")) {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
-.addField(' السيرفرات🌐',`[${client.guilds.size}]  `)
-.addField(' الاعضاء👥 ',` [${client.users.size}] `)
-.addField('الرومات📚 ',`[${client.channels.size}]`) 
-.addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
-.addField('مصمم  + صاحب البوت ',`! 1 NoNo`)
-.setColor('#7d2dbe')
+      .setColor('RANDOM')
+.setTitle('**Arabs Bot Info**')
+.addField(':bookmark:``اسم البوت``' , ` **${client.user.tag} **` , true)
+.addField(':id:``اي دي البوت``' , `** ${client.user.id} **` , true)
+.addField(':robot:``السيرفرات التي يتواجد به البوت``',`**${client.guilds.size} سيرفر **`)
+.addField(':busts_in_silhouette:``مجموع الاعضاء``',`** ${client.users.size}**`)
+.addField(':bookmark_tabs:``مجموع الرومات``',`**${client.channels.size}**`) 
+.addField(':ok_hand:``الامر الخاص بي``' , `**!**` , true)
+.addField(':signal_strength:``بنق البوت``',`**${client.ping} ms**`) 
+.addField(':signal_strength:``سرعة انشاء الرسالة``',`**${Date.now() - message.createdTimestamp} ms**`) 
+.addField('``مساحة الرام المستخدمة``', `**${(process.memoryUsage().rss / 1048576).toFixed()}MB**`, true)
+.addField('تاريخ صنع البوت', client.user.createdAt, true)
+.addField('``مصممين , اصحاب البوت``',`**<@337309575864647680><@495149259340120076>**,`)
   message.channel.sendEmbed(embed);
     }
 });
+
 
 client.on('message', message => {
     if (message.content === '>roles') {
