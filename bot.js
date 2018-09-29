@@ -222,15 +222,15 @@ return message.channel.send(serverEmbed);
 client.on('message', message => {
      if(message.content.startsWith(prefix + "clear")) {
          var args = message.content.split(" ").slice(1);
- if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('You need MANAGE_MESSAGES permission noob');
+ if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('You need MANAGE_MESSAGES permission');
   if (!args[0]) return message.channel.send('You didn\'t provide any number!!!');
-    m.delete(1000);
-
+   
   message.channel.bulkDelete(args[0]).then(() => {
     const embed = new Discord.RichEmbed()
       .setColor(0xF16104)
       .setDescription(`Cleared ${args[0]} messages.`);
     message.channel.send({ embed });
+    m.delete(1000);
 
     const actionlog = message.guild.channels.find('name', 'log');
 
