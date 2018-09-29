@@ -230,7 +230,6 @@ client.on('message', message => {
       .setColor(0xF16104)
       .setDescription(`Cleared ${args[0]} messages.`);
     message.channel.send({ embed });
-    m.delete(1000);
 
     const actionlog = message.guild.channels.find('name', 'log');
 
