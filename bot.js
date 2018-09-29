@@ -1,23 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
- const prefix = ">";
-client.on('im hi lol eread lw wow hi ready', function(){    
-    var ms = 40000 ;    
-    var setGame = ['>help | >inv By : Jungle TeaM'];    
-    var i = -1;    
-    var j = 0;    
-    setInterval(function (){    
-        if( i == -1 ){    
-j = 1;    
-       }    
-        if( i == (setGame.length)-1 ){    
-            j = -1;    
-      }    
-       i = i+j;    
-        client.user.setGame(setGame[i],`https://www.twitch.tv/S-F`);    
-}, ms);    
-    
-});
+ const prefix = "!!";
 
 client.on("message", message => {
     var prefix = ">";
@@ -75,6 +58,56 @@ ${prefix}صراحه ⇏ game صراحه
         });
     }
 });
+
+
+
+
+
+
+client.on('message', message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "help") {
+message.reply('**check your DMs! :mailbox_with_mail: **'
+	      
+ message.author.sendMessage(`
+**Arabs Bot By: <@495149259340120076> + <@337309575864647680>** 
+╔═══╗────╔╗─────╔══╗───╔╗
+║╔═╗║────║║─────║╔╗║──╔╝╚╗
+║║─║╠═╦══╣╚═╦══╗║╚╝╚╦═╩╗╔╝
+║╚═╝║╔╣╔╗║╔╗║══╣║╔═╗║╔╗║║
+║╔═╗║║║╔╗║╚╝╠══║║╚═╝║╚╝║╚╗
+╚╝─╚╩╝╚╝╚╩══╩══╝╚═══╩══╩═╝
+
+╔[❖════════════❖]╗
+             Prefix = ' ! '
+╚[❖════════════❖]╝
+╔[❖════════════❖]╗
+             Admin Commands
+╚[❖════════════❖]╝
+❖ !bc <message> ➾ message all members in server
+❖ !mute <user> <reason> ➾ mute from server
+❖ !unmute <user> ➾ unmute from server
+❖ !kick <user> <reason> ➾ kick from server
+❖ !clear ➾ clear chat
+❖ !ban <mention> <reason> ➾ ban member from server
+❖ !role <mention> <role> ➾ to give member role
+❖ !rerole  <role> ➾ to remove role
+╔[❖════════════❖]╗
+            General  Commands
+╚[❖════════════❖]╝
+
+ 
+==================================================================
+Server support: https://discord.gg/BrNXQRE
+==================================================================
+bot invite link: https://discordapp.com/oauth2/authorize?client_id=495612681361817601&permissions=8&scope=bot
+==================================================================
+`);
+
+    }
+});  
+
+
 
 
 client.on('voiceStateUpdate', (oldM, newM) => {
