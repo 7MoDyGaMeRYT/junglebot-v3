@@ -3,7 +3,7 @@ const client = new Discord.Client();
  const prefix = "!";
 
 client.on('message', iimr7modyx => {
-  if (iimr7modyx.content === "#time") {
+  if (iimr7modyx.content === "!time") {
          if (!iimr7modyx.channel.guild) return iimr7modyx.reply('** This command only for servers **');  
          var currentTime = new Date(),
             hours = currentTime.getHours() + 2 ,
